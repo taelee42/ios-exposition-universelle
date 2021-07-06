@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Expo1900
 
 class Expo1900Tests: XCTestCase {
 
@@ -17,15 +18,24 @@ class Expo1900Tests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        guard let itemJsonData = NSDataAsset(name: "items", bundle: Bundle(for: Expo1900Tests.self)) else {
-            XCTFail();
-            return
+    func test_첫페이지_json파일_파싱테스트() throws {
+        let result = JSONParser.parse(from: "exposition_universelle_1900", to: Exposition.self)
+        switch result {
+        case .success(let data):
+            print(data)
+        case .failure(let error):
+            print(error.localizedDescription)
         }
-        
-//        guard let items = try? jsonDecoder.decode([ExhibitedItem].self, from: itemJsonData.data) else { XCTFail(); return }
-        
-//        XCTAssertEqual(items.count, 13)
+    }
+    
+    func testItems_json파일_파싱테스트() throws {
+        let result = JSONParser.parse(from: "items", to: [Item].self)
+        switch result {
+        case .success(let data):
+            print(data)
+        case .failure(let error):
+            print(error.localizedDescription)
+        }
     }
 
 //    func testPerformanceExample() throws {
