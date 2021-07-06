@@ -86,14 +86,11 @@
 		C79FF4B32589F401005FB0FD /* Expo1900 */ = {
 			isa = PBXGroup;
 			children = (
-				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
-				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
-				C79FF4B82589F401005FB0FD /* ViewController.swift */,
-				CE6E736226933DAF00D9AA7A /* JSONParser.swift */,
+				CE6E737426945F8F00D9AA7A /* Controlloer */,
+				CE6E73782694607800D9AA7A /* Util */,
 				CE6E735D26933A8000D9AA7A /* Model */,
-				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
+				CE6E73772694607200D9AA7A /* View */,
 				C79FF4BD2589F404005FB0FD /* Assets.xcassets */,
-				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 				C79FF4C22589F404005FB0FD /* Info.plist */,
 			);
 			path = Expo1900;
@@ -115,6 +112,33 @@
 				CE6E73682694170D00D9AA7A /* Exposition.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE6E737426945F8F00D9AA7A /* Controlloer */ = {
+			isa = PBXGroup;
+			children = (
+				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
+				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
+				C79FF4B82589F401005FB0FD /* ViewController.swift */,
+			);
+			path = Controlloer;
+			sourceTree = "<group>";
+		};
+		CE6E73772694607200D9AA7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
+				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE6E73782694607800D9AA7A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E736226933DAF00D9AA7A /* JSONParser.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
