@@ -26,6 +26,7 @@ class Expo1900Tests: XCTestCase {
         case .failure(let error):
             print(error.localizedDescription)
         }
+        XCTAssertEqual(try result.get().location, "프랑스 파리")
     }
     
     func testItems_json파일_파싱테스트() throws {

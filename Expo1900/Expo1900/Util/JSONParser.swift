@@ -15,16 +15,13 @@ enum JSONParserError: Error {
 
 struct JSONParser {
     static func parse<T: Decodable>(from name: String, to type: T.Type) -> Result<T, JSONParserError> {
-        print(1)
         guard let asset = NSDataAsset(name: name) else {
             return .failure(.invalidName)
         }
-        print(2)
         let decoder = JSONDecoder()
         guard let result = try? decoder.decode(type, from: asset.data) else {
             return .failure(.failedToDecode)
         }
-        print(3)
         return .success(result)
     }
 }
