@@ -13,6 +13,8 @@
 		C79FF4BC2589F401005FB0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BA2589F401005FB0FD /* Main.storyboard */; };
 		C79FF4BE2589F404005FB0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BD2589F404005FB0FD /* Assets.xcassets */; };
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
+		CE59F0922694AE240072BE92 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59F0912694AE240072BE92 /* ItemListViewController.swift */; };
+		CE59F0972694B4550072BE92 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59F0962694B4550072BE92 /* ItemCell.swift */; };
 		CE6E7345269322F100D9AA7A /* Expo1900Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E7344269322F100D9AA7A /* Expo1900Tests.swift */; };
 		CE6E735926933A7600D9AA7A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E735826933A7600D9AA7A /* Item.swift */; };
 		CE6E735A26933A7600D9AA7A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E735826933A7600D9AA7A /* Item.swift */; };
@@ -39,6 +41,8 @@
 		C79FF4BD2589F404005FB0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C79FF4C02589F404005FB0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE59F0912694AE240072BE92 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		CE59F0962694B4550072BE92 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = Expo1900/Controlloer/ItemCell.swift; sourceTree = SOURCE_ROOT; };
 		CE6E7342269322F100D9AA7A /* Expo1900Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Expo1900Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6E7344269322F100D9AA7A /* Expo1900Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expo1900Tests.swift; sourceTree = "<group>"; };
 		CE6E7346269322F100D9AA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ViewController.swift */,
+				CE59F0962694B4550072BE92 /* ItemCell.swift */,
+				CE59F0912694AE240072BE92 /* ItemListViewController.swift */,
 			);
 			path = Controlloer;
 			sourceTree = "<group>";
@@ -241,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE59F0972694B4550072BE92 /* ItemCell.swift in Sources */,
 				CE6E735926933A7600D9AA7A /* Item.swift in Sources */,
+				CE59F0922694AE240072BE92 /* ItemListViewController.swift in Sources */,
 				CE6E736326933DAF00D9AA7A /* JSONParser.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */,
 				CE6E73692694170D00D9AA7A /* Exposition.swift in Sources */,
