@@ -14,7 +14,7 @@ class ItemListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         items = try? JSONParser.parse(from: "items", to: [Item].self).get()
-//        listTableView.estimatedRowHeight = 500
+        listTableView.estimatedRowHeight = 500
         listTableView.rowHeight = UITableView.automaticDimension
     }
 
@@ -35,29 +35,8 @@ extension ItemListViewController: UITableViewDataSource {
         cell.updateUI(data: cellData)
         
         cell.layoutIfNeeded()
-//        cell.setNeedsLayout()
-//        tableView.layoutSubviews()
-//        tableView.layoutIfNeeded()
-        
         return cell
     }
-    
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as? ItemCell else {
-//            return 0
-//        }
-//        return UITableView.automaticDimension
-//    }
-//
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as? ItemCell else {
-//            return 0
-//        }
-//        return 500
-//
-//    }
-    
 }
 
 extension ItemListViewController: UITableViewDelegate {

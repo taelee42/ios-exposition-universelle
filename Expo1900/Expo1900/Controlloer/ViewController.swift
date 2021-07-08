@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         descriptionLabel.text = parsedMainViewData?.description
         flagImage1.image = UIImage(named: "flag")
         flagImage2.image = UIImage(named: "flag")
+        print(titleLabel.accessibilityLabel)
     }
     
     override func viewDidLoad() {
