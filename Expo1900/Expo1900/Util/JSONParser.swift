@@ -14,12 +14,20 @@ enum JSONParserError: Error {
 }
 
 struct JSONParser {
-    static func parse<T: Decodable>(from name: String, to type: T.Type) -> Result<T, JSONParserError> {
-        guard let asset = NSDataAsset(name: name) else {
+    static func loadAsset(for name: String) -> NSDataAsset? {
+        return NSDataAsset(name: name)
+    }
+    
+    static func decodeAsset<T: Decodable>(type: T.Type, from data: Data) -> T? {
+        let decoder = JSONDecoder()
+        return try? decoder.decode(type, from: data)
+    }
+    
+    static func parse<T: Decodable>(name: String, to type: T.Type) -> Result<T, JSONParserError> {
+        guard let asset = loadAsset(for: name) else {
             return .failure(.invalidName)
         }
-        let decoder = JSONDecoder()
-        guard let result = try? decoder.decode(type, from: asset.data) else {
+        guard let result = decodeAsset(type: type, from: asset.data) else {
             return .failure(.failedToDecode)
         }
         return .success(result)
