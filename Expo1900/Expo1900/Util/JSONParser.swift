@@ -23,7 +23,7 @@ struct JSONParser {
         return try? decoder.decode(type, from: data)
     }
     
-    static func parse<T: Decodable>(name: String, to type: T.Type) -> Result<T, JSONParserError> {
+    static func parse<T: Decodable>(from name: String, to type: T.Type) -> Result<T, JSONParserError> {
         guard let asset = loadAsset(for: name) else {
             return .failure(.invalidName)
         }
