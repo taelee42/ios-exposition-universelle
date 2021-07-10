@@ -13,13 +13,19 @@ class ExpositionListViewController: UIViewController {
     @IBOutlet var expositionTableView: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailViewSegue",
-           let detailView = segue.destination as? ExpositionDetailViewController,
-           let cell = sender as? UITableViewCell,
-           let indexPath = expositionTableView.indexPath(for: cell),
-           let expositionItem = expositionItems?[indexPath.row]
-           {
-            detailView.configure(expositionItem: expositionItem)
+//        if segue.identifier == "DetailViewSegue",
+//           let detailView = segue.destination as? ExpositionDetailViewController,
+//           let cell = sender as? UITableViewCell,
+//           let indexPath = expositionTableView.indexPath(for: cell),
+//           let expositionItem = expositionItems?[indexPath.row]
+//           {
+//            detailView.configure(expositionItem: expositionItem)
+//        }
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? ExpositionDetailViewController
+            if let index = sender as? Int {
+                vc?.expositionItem = expositionItems?[index]
+            }
         }
     }
 	
@@ -32,7 +38,7 @@ class ExpositionListViewController: UIViewController {
 	}
 }
 
-extension ExpositionListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ExpositionListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return expositionItems?.count ?? 0
 	}
@@ -48,4 +54,10 @@ extension ExpositionListViewController: UITableViewDelegate, UITableViewDataSour
         cell.itemImage.image = expositionItem?.image
 		return cell
 	}
+}
+
+extension ExpositionListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+    }
 }

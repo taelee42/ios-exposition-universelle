@@ -19,9 +19,4 @@ class ExpositionDetailViewController: UIViewController {
         itemDescriptionLabel.text = expositionItem?.description
         self.navigationItem.title = expositionItem?.name
     }
-    
-    func configure(expositionItem: ExpositionItem) {
-        self.expositionItem = expositionItem
-    }
-	
 }

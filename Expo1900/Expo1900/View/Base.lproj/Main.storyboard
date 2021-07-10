@@ -190,7 +190,6 @@
                                             <outlet property="itemImage" destination="GtU-bU-moD" id="NTq-hT-pge"/>
                                             <outlet property="name" destination="rvz-EO-Xz3" id="tT0-5F-HL1"/>
                                             <outlet property="shortDescription" destination="BLX-gp-sjT" id="JTt-OJ-MLh"/>
-                                            <segue destination="hZ8-kK-S9c" kind="show" identifier="DetailViewSegue" id="xdc-6Q-whX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -208,6 +207,7 @@
                     <navigationItem key="navigationItem" title="한국의 출품작" id="zfQ-ZG-lca"/>
                     <connections>
                         <outlet property="expositionTableView" destination="kMZ-KI-Ev1" id="plj-4p-70q"/>
+                        <segue destination="hZ8-kK-S9c" kind="show" identifier="showDetail" id="sPl-2w-Ngu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQ6-bF-ox0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
