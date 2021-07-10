@@ -34,7 +34,7 @@ extension ItemListViewController: UITableViewDataSource {
         }
         cell.updateUI(data: cellData)
         
-        cell.layoutIfNeeded()
+//        cell.layoutIfNeeded()
         return cell
     }
 }
